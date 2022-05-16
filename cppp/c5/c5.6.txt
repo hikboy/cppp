@@ -1,0 +1,19 @@
+#include <iostream>
+#include <stdexcept>
+
+using namespace std;
+
+int main(void)
+{
+    if(iterm1.isbn() != item2.isbn())
+        throw runtime_error("Data must refer to same ISBN");
+    cout << item1 + item2 << endl;
+
+    try{
+       program-statemants 
+    } catch (exception-declaration){
+        handler-statement
+    }
+
+    return 0;
+}
