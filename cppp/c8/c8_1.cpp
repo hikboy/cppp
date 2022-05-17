@@ -12,5 +12,9 @@ int main(void)
     cout << "hi" << endl;  //hi and newline
     cout << "hi" << flush; // jsut flush 
     cout << "hi" << ends;  //hi and null
+
+    cout << unitbuf;
+    cout << "hi" << endl;
+    cout << nounitbuf;
     return 0;
 }
