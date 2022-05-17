@@ -15,8 +15,14 @@ public:
     //Sales_data(std::istream&);
 
     Sales_data(): Sales_data("", 0, 0) {}
-    Sales_data(const std::string &s): Sales_data(s, 0, 0) {}
-    Sales_data(std::istream &is): Sales_data() {read(is, *this);}
+    explicit Sales_data(const std::string &s): Sales_data(s, 0, 0) {}
+    explicit Sales_data(std::istream &is): Sales_data() {read(is, *this);}
+
+    //explicit constructors can be used only for direct initialization
+    // Sales_data item1 (null_book); // ok
+    // Sales_data item2 = null_book; // error 
+    // item.combine(Sales_data(null_book));
+    // item.combine(static_cast<Sales_data>(cin))
 
     std::string isbn() const {return bookNo;}
 
