@@ -16,5 +16,18 @@ int main(void)
     cout << unitbuf;
     cout << "hi" << endl;
     cout << nounitbuf;
+
+    if(cin.tie())
+        cout << "cin tie" << endl;
+    else
+        cout << "cin do not tie" << endl;
+
+    cin.tie(nullptr);
+    cout << "clear the tie, and try again" << endl;
+
+    if(cin.tie())
+        cout << "cin tie" << endl;
+    else
+        cout << "cin do not tie" << endl;
     return 0;
 }
