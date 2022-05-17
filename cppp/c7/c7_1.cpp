@@ -2,6 +2,8 @@
 #include <iostream>
 #include "Screen.h"
 #include "Window_mgr.h"
+#include "Debug.h"
+#include "Account.h"
 
 int main(void)
 {
@@ -21,6 +23,18 @@ int main(void)
 
     myscreen1.set('#').display(std::cout);
     blank.display(std::cout);
+
+    constexpr Debug io_sub(false, true, false);
+
+    if(io_sub.any())
+        std::cerr << "print appropriate error message" << std::endl;
+
+    constexpr Debug prod(false);
+    if(prod.any())
+        std::cerr << "print an error message" << std::endl;
+    
+    double r;
+    r = Account::rate();
 
     return 0;
 }
