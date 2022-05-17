@@ -1,10 +1,12 @@
 
 #include "Sales_data.h"
 
+#if 0
 Sales_data::Sales_data(std::istream& is)
 {
     read(is, *this);
 }
+#endif
 
 Sales_data& Sales_data::combine(const Sales_data& rhs)
 {
