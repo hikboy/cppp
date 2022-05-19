@@ -29,6 +29,7 @@ int main(void)
     auto it8 = a.crend();
 
     vector<const char*> articles =  {"a", "an", "the"};
+    vector<const char*> articles1 =  {"b", "c"};
     list<string> list2(a);
 //    deque<string> authList(a);
 //    vector<string> words(articles);
@@ -42,7 +43,47 @@ int main(void)
     array<string, 10> iarray;
     array<int, 10>::size_type i;
 
-    cout << "return from program" << endl;
+    {
+        auto it = articles.begin();
+        while(it != articles.end()){
+            cout << *it++ << endl;
+        }
+    }
 
+    articles.assign(articles1.begin(), articles1.end());
+    cout << "assign the container" << endl;
+
+    {
+        auto it = articles.begin();
+        while(it != articles.end()){
+            cout << *it++ << endl;
+        }
+
+    }
+
+    cout << "assign the container again" << endl;
+
+    articles.assign({"ljb", "hap", "zls"});
+
+    {
+        auto it = articles.begin();
+        while(it != articles.end()){
+            cout << *it++ << endl;
+        }
+
+    }
+
+    cout << "assign the container again and again" << endl;
+    articles.assign(10, "l");
+
+    {
+        auto it = articles.begin();
+        while(it != articles.end()){
+            cout << *it++ << endl;
+        }
+
+    }
+
+    cout << "return from program" << endl;
     return 0;
 }
