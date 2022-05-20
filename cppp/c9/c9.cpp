@@ -84,6 +84,16 @@ int main(void)
 
     }
 
+    vector<int> test1;
+    test1.push_back(1);
+    cout << "test1.size() is : " << test1.size() << endl;
+
+    list<int> ilist;
+
+    for(size_t ix = 0; ix !=4; ++ix)
+        ilist.push_front(ix);
+    cout << "ilist.size() is " << ilist.size() << endl;
+
     cout << "return from program" << endl;
     return 0;
 }
