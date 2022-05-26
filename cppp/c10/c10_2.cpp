@@ -27,6 +27,12 @@ int main(void)
 
     for(auto i = vs.begin(); i != vs.end(); i++)
         cout << *i << endl;
+    
+    cout << "vs.size is " << vs.size() << endl;
+
+    elimDups(vs);
+
+    cout << "vs.size is " << vs.size() << endl;
 
     return 0;
 }
