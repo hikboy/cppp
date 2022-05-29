@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -g CMakeFiles/c1.5.2.dir/c1.5.2.cpp.o -o c1.5.2 

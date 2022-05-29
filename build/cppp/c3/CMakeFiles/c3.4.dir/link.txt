@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -g CMakeFiles/c3.4.dir/c3.4.cpp.o -o c3.4 

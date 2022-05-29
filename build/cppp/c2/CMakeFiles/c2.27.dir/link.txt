@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -g CMakeFiles/c2.27.dir/c2.27.cpp.o -o c2.27 

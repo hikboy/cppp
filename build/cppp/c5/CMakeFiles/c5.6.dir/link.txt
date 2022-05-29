@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -g CMakeFiles/c5.6.dir/c5.6.cpp.o -o c5.6 

@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -g CMakeFiles/c8_1.dir/c8_1.cpp.o -o c8_1 

@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -g CMakeFiles/c7_1.dir/c7_1.cpp.o CMakeFiles/c7_1.dir/Sales_data.cpp.o CMakeFiles/c7_1.dir/Screen.cpp.o CMakeFiles/c7_1.dir/Window_mgr.cpp.o CMakeFiles/c7_1.dir/Debug.cpp.o CMakeFiles/c7_1.dir/Account.cpp.o -o c7_1 

@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -g CMakeFiles/c10_2.dir/c10_2.cpp.o -o c10_2 

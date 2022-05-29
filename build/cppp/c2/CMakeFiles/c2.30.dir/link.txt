@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -g CMakeFiles/c2.30.dir/c2.30.cpp.o -o c2.30 

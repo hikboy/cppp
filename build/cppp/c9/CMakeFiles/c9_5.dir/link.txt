@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -g CMakeFiles/c9_5.dir/c9_5.cpp.o -o c9_5 

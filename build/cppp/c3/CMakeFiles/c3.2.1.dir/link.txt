@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7 -g CMakeFiles/c3.2.1.dir/c3.2.1.cpp.o -o c3.2.1 
