@@ -2,6 +2,9 @@
 #include <iostream>
 #include <list>
 #include <algorithm>
+#include <iterator>
+#include <vector>
+#include <numeric>
 
 using namespace std;
 
@@ -24,6 +27,31 @@ int main(void)
     for(const auto &l : lst2)
         cout << l << " ";
     cout << endl;
+
+    vector<int> vec;
+    istream_iterator<int> in(cin);
+    istream_iterator<int> in_eof;
+
+    //cout << accumulate(in, in_eof, 0) << endl;
+
+    while(in != in_eof)
+        vec.push_back(*in++);
+
+    for(const auto &v : vec)
+        cout << v << " ";
+
+    cout << endl;
+
+    ostream_iterator<int> out(cout, ", ");
+    for(auto e : vec)
+        //*out++ = e;
+        out = e;
+        //we can use either
+
+    cout << endl;
+
+    copy(vec.begin(), vec.end(), out);
+
     return 0;
 }
 
