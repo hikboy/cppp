@@ -1,0 +1,1 @@
+/usr/bin/x86_64-linux-gnu-g++-7 -g CMakeFiles/c6.2.1.dir/c6.2.1.cpp.o -o c6.2.1 
