@@ -2,11 +2,13 @@
 #include <iostream>
 #include <map>
 #include <set>
+#include <unordered_map>
 
 using namespace std;
 
 int main(void)
 {
+    //unordered_map<string, size_t> word_count;
     map<string, size_t> word_count;
     set<string> exclude {"the", "a", "but"};
     string word;
