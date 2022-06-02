@@ -84,5 +84,60 @@ int main(void)
     set2.insert({1,3,5,7,1,3,5,7});
     cout << "set2's size is : " << set2.size() << endl;
 
+    imap.insert({"word", 1});
+    imap.insert(make_pair("you", 2));
+    imap.insert(pair<string, int>("are", 3));
+    imap.insert(map<string, int>::value_type("me", 3));
+
+#if 0
+    map<string, int> word_cnt;
+    string word;
+    while(cin >> word){
+        auto ret = word_cnt.insert({word, 1});
+        if(!ret.second)
+           ++ret.first->second; 
+    }
+
+    for(auto &p : word_cnt)
+        cout << p.first << ' '  << p.second << endl;
+
+    for(auto p : word_cnt)
+        cout << p.first << ' '  << p.second << endl;
+#endif
+
+    multimap<string, string> authors;
+    authors.insert({"Barth, John", "Sot-Weed Factor"});
+    authors.insert({"Barth, John", "Lost in the Funhouse"});
+    cout << "size of multi is " << authors.size() << endl;
+
+    string remove_word {"Barth, John"};
+    //string remove_word {"get"};
+    if(authors.erase(remove_word))
+        cout << "ok: " << remove_word << " removed\n";
+    else
+        cout << "oops: " << remove_word << " not found\n";
+
+    map<string, size_t> w_c;
+    w_c["anna"] = 1;
+    //w_c.at("l") = 2; //out of range exception
+    cout << "count is " <<  w_c.count("anna")  << endl;
+    cout << "count is " <<  w_c.count("liu")  << endl;
+
+    auto lit = w_c.lower_bound("ljb");
+    auto uit = w_c.upper_bound("ljb");
+    auto eit = w_c.equal_range("ljb");
+
+    set<int> iiset {0,1,2,3,4,5,6,7};
+    iiset.find(1);
+    iiset.find(11);
+    iiset.count(1);
+    iiset.count(11);
+
+    string search_item {"hello"};
+    for(auto pos = authors.equal_range(search_item);
+        pos.first != pos.second; 
+        ++pos.first)
+        cout << pos.first->second << endl;
+
     return 0;
 }

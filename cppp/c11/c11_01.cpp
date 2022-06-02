@@ -17,6 +17,8 @@ int main(void)
     for(const auto &w : word_count)
         cout << w.first << " occurs "  << w.second
              << ((w.second > 1) ? " times " : " time") << endl;
+    if(word_count.find("find") == word_count.end())
+        cout << "can not find, that is not in the map" << endl;
     return 0;
 }
 
