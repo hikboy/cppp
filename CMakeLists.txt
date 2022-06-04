@@ -21,6 +21,7 @@ add_subdirectory(cppp/c8)
 add_subdirectory(cppp/c9)
 add_subdirectory(cppp/c10)
 add_subdirectory(cppp/c11)
+add_subdirectory(cppp/c12)
 add_subdirectory(test)
 
 
