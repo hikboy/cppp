@@ -16,7 +16,9 @@ public:
         {data->push_back(t);}
     void pop_back();
     std::string & front();
+    const std::string & front() const;
     std::string & back();
+    const std::string & back() const;
 
 private:
     std::shared_ptr<std::vector<std::string>> data;

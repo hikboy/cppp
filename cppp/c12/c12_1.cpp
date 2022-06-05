@@ -33,6 +33,9 @@ int main(void)
 
     auto p6 = make_shared<int>();
     auto p7(p6);
+    auto ap1 = new auto("hello");
+    auto ap2 = new auto(5);
+    //auto ap3 = new auto{0,1,2};
 
     return 0;
 }
