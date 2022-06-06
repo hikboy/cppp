@@ -37,5 +37,20 @@ int main(void)
     auto ap2 = new auto(5);
     //auto ap3 = new auto{0,1,2};
 
+    const int *pci = new const int (1024);
+    const string *pcs = new const string;
+    auto pp = new const string;
+
+    int *p11 = new int;
+    int *p22 = new (nothrow) int;
+    delete p11;
+    delete p22;
+
+    int *pq(new int(42));
+    auto qp1 = pq;
+    delete pq;
+    pq = nullptr;
+
+
     return 0;
 }
