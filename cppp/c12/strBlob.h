@@ -5,8 +5,13 @@
 #include <memory>
 #include <initializer_list>
 
+class strBlobPtr;
 class strBlob {
+    friend class strBlobPtr;
 public:
+    strBlobPtr begin();
+    strBlobPtr end();
+
     typedef std::vector<std::string>::size_type size_type;
     strBlob();
     strBlob(std::initializer_list<std::string> il);
@@ -24,4 +29,19 @@ private:
     std::shared_ptr<std::vector<std::string>> data;
     void check(size_type i, const std::string &msg) const;
 
+};
+
+class strBlobPtr {
+public:
+    strBlobPtr(): curr(0) {}
+    strBlobPtr(strBlob &a, size_t sz = 0):
+        wptr(a.data), curr(sz) {}
+    std::string& deref() const;
+    strBlobPtr& incr();
+
+private:
+    std::shared_ptr<std::vector<std::string>>
+        check(std::size_t, const std::string&) const;
+    std::weak_ptr<std::vector<std::string>> wptr;
+    std::size_t curr;
 };

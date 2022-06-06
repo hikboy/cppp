@@ -45,3 +45,38 @@ void strBlob::pop_back()
     check(0, "pop_back on empty strBlob");
     data->pop_back();
 }
+
+strBlobPtr strBlob::begin() 
+{
+    return strBlobPtr(*this);
+}
+
+strBlobPtr strBlob::end() 
+{
+    auto ret = strBlobPtr(*this, data->size()); 
+    return ret;
+}
+
+std::shared_ptr<std::vector<std::string>>
+strBlobPtr::check(std::size_t i, const std::string &msg) const
+{
+    auto ret = wptr.lock();
+    if(!ret)
+        throw std::runtime_error("unbound strBlobPtr");
+    if(i>=ret->size())
+        throw std::out_of_range(msg);
+    return ret;
+}
+
+std::string& strBlobPtr::deref() const
+{
+    auto p = check(curr, "dereference past end");
+    return (*p)[curr];
+}
+
+strBlobPtr& strBlobPtr::incr()
+{
+    check(curr, "increment past end of strBlobPtr");
+    ++curr;
+    return *this;
+}

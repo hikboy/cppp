@@ -85,6 +85,22 @@ int main(void)
     p5a.reset(p4a.release()); 
 
     auto ppp = p5a.release();
+
+    int ix =1024, *pi = &ix, *pi2 = new int(2048);
+    typedef unique_ptr<int> IntP;
+    //IntP p00(ix);
+    //IntP p01(pi);
+    IntP p02(pi2);
+    //IntP p03(&ix);
+    IntP p04(new int(2048));
+    //IntP p05(p2a.get());
+
+    auto pp1 = make_shared<int>(42);
+    weak_ptr<int> wp(p);
+    
+    if(shared_ptr<int> np = wp.lock()){
+        cout << "np is exist" << endl;
+    }
     
     return 0;
 }
