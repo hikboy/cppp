@@ -15,6 +15,7 @@ public:
     typedef std::vector<std::string>::size_type size_type;
     strBlob();
     strBlob(std::initializer_list<std::string> il);
+    ~strBlob(){};
     size_type size() const {return data->size();}
     bool empty() const {return data->empty();}
     void push_back(const std::string &t)

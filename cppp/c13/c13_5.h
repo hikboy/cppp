@@ -9,6 +9,13 @@ public:
         ps(new std::string(s)), i(0) {}
 
     HasPtr(const HasPtr& hp):ps(new std::string(*hp.ps)), i(hp.i) {}
+    HasPtr& operator=(const HasPtr& hp){
+        auto newp = new std::string(*hp.ps);
+        delete ps;
+        ps = newp;
+        i = hp.i;
+        return *this;
+    }
 
 private:
     std::string *ps;
