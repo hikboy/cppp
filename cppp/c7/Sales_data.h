@@ -21,7 +21,6 @@ public:
 
     Sales_data(const Sales_data&) = default;
     Sales_data& operator=(const Sales_data&);
-    ~Sales_data() = default;
 
     //explicit constructors can be used only for direct initialization
     // Sales_data item1 (null_book); // ok

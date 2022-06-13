@@ -4,6 +4,12 @@
 
 using namespace std;
 
+struct NoCopy {
+    NoCopy() = default;
+    NoCopy(const NoCopy&) = delete;
+    NoCopy &operator=(const NoCopy&) = delete;
+};
+
 struct X {
     X() {cout << "X()" << endl;}
     X(const X&) {cout << "X(const X&)"<<endl;}
