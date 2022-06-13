@@ -34,6 +34,7 @@ Sales_data add(const Sales_data &lhs, const Sales_data &rhs)
 }
 
 //Sales_data add(const Sales_data&, const Sales_data&);
+Sales_data& Sales_data::operator=(const Sales_data&) = default;
 
 
 std::istream &read(std::istream& is, Sales_data& item)

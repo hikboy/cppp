@@ -18,6 +18,11 @@ public:
     explicit Sales_data(const std::string &s): Sales_data(s, 0, 0) {}
     explicit Sales_data(std::istream &is): Sales_data() {read(is, *this);}
 
+
+    Sales_data(const Sales_data&) = default;
+    Sales_data& operator=(const Sales_data&);
+    ~Sales_data() = default;
+
     //explicit constructors can be used only for direct initialization
     // Sales_data item1 (null_book); // ok
     // Sales_data item2 = null_book; // error 
