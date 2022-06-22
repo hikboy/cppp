@@ -8,6 +8,7 @@ struct NoCopy {
     NoCopy() = default;
     NoCopy(const NoCopy&) = delete;
     NoCopy &operator=(const NoCopy&) = delete;
+    ~NoCopy() = delete;
 };
 
 struct X {
@@ -18,6 +19,7 @@ struct X {
         cout << "operator=" << endl;
         return *this;
     }
+    //NoCopy abc;
 
 };
 
@@ -42,6 +44,9 @@ int main(void)
     vector<X> vecX{a,a};
     #endif
     vector<X> b;
+    //NoCopy aa;
+    NoCopy *p = new NoCopy();
+    //delete p;
 
     cout << "test over!" << endl;
     return 0;
