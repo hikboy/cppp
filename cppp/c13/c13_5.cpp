@@ -11,17 +11,9 @@ HasPtr::~HasPtr()
     }
 }
 
-HasPtr& HasPtr::operator=(const HasPtr& hp)
+HasPtr& HasPtr::operator=(HasPtr hp)
 {
-    ++*hp.use;
-    if(--*use == 0){
-        delete ps;
-        delete use;
-    }
-    ps = hp.ps;
-    i = hp.i;
-    use = hp.use;
-
+    swap(*this, hp);
     return *this;
 }
 

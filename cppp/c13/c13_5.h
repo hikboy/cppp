@@ -10,7 +10,8 @@ public:
         ps(new std::string(s)), i(0), use(new std::size_t(1)) {}
 
     HasPtr(const HasPtr& hp):ps(hp.ps), i(hp.i), use(hp.use) {*use++;}
-    HasPtr& operator=(const HasPtr& hp);
+    //HasPtr& operator=(const HasPtr& hp);
+    HasPtr& operator=(HasPtr hp);
     ~HasPtr();
 
 private:
