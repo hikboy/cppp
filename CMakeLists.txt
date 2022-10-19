@@ -25,6 +25,7 @@ add_subdirectory(cppp/c12)
 add_subdirectory(cppp/c13)
 add_subdirectory(cppp/c14)
 add_subdirectory(effective-m-cpp)
+add_subdirectory(TheCppSTL)
 add_subdirectory(test)
 
 
